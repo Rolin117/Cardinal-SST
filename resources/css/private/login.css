@@ -8,14 +8,9 @@ body {
   }
   
   .card {
-    max-width: 500px;
+    max-width: 600px;
     margin: 30px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-title {
-    text-align: center;
-    margin-bottom: 30px;
   }
   
   .form-group {
