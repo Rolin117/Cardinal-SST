@@ -1,0 +1,49 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ffff;
+  }
+
+  canvas {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 100%; /* Asegúrate de que el canvas tome todo el ancho del contenedor */
+}
+
+.grafica {
+    margin-bottom: 20px; /* Agrega un margen inferior si es necesario */
+}
+
+.tb-clientes {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho de su contenedor */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grafica, .tb-clientes {
+        width: 100%; /* Las tablas y las gráficas ocupan todo el ancho en dispositivos pequeños */
+    }
+}
+
+.stat-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+.container {
+    gap: rem;
+}
