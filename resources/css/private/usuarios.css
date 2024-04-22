@@ -1,72 +1,74 @@
 @import url('https://fonts.googleapis.com/css2? family=Poppins:wght@200;300;400;500;600;700;800;900& display=swap');
-*
-{
+
+* {
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body
-{
+
+body {
     background: #dee1e2;
     min-height: 100vh;
     overflow-x: hidden;
 }
-.logo
-{
-    color: #FFFFFF;
+
+.logo {
+    color: #333;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
-header
-{
+
+header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
-    background: #333333;
+    background: #FFFFFF;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 15px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
 }
-.group
-{
+
+.group {
     display: flex;
     align-items: center;
 }
-header ul
-{
+
+header ul {
     position: relative;
     display: flex;
     gap: 30px;
 }
-header ul li
-{
+
+header ul li {
     list-style: none;
 }
-header ul li a
-{
+
+header ul li a {
     position: relative;
     text-decoration: none;
-    font-size: 1em;
-    color: #ffffff;
+    font-size: 0.8em;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
+
 .nav-item {
-    color: white;
+    font-size: 0.8em;
+    color: rgb(0, 0, 0);
 }
-header ul li a::before
-{
-   content: '';
-   position: absolute;
-   bottom: -2px;
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
     width: 100%;
     height: 2px;
     background: #fffefe;
@@ -74,13 +76,13 @@ header ul li a::before
     transition: transform 0.5s ease-in-out;
     transform-origin: right;
 }
-header ul li a:hover::before
-{
+
+header ul li a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
 }
-.searchBox
-{
+
+.searchBox {
     position: absolute;
     right: -100%;
     width: 100%;
@@ -92,34 +94,32 @@ header ul li a:hover::before
     transition: 0.5s ease-in-out;
 }
 
-.searchBox.active
-{
+.searchBox.active {
     right: 0;
 }
-.searchBox input
-{
-   width: 100%;
-   border: none;
-   outline: none;
-   height: 50px;
-   color: #333;
-   font-size: 1.25em;
-   background: #fff;
-   border-bottom: 1px solid rgba(0,0,0,0.5);
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    color: #333;
+    font-size: 1.25em;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-.searchBtn
-{
+
+.searchBtn {
     position: relative;
     left: 30px;
     top: 2.5px;
     transition: 0.5s ease-in-out;
 }
-.closeBtn
-{
+
+.closeBtn {
     opacity: 0;
     visibility: hidden;
-}
-
+} 
 
 /*ajustar los tamaños del carrusel*/
 #carouselExampleAutoplaying{
