@@ -15,18 +15,70 @@ body {
 
 main {
     margin-top: 10rem;
+    margin-bottom: 2rem;
 }
-
 .boton-busqueda {
     background-color: #00B207;
-    border-style: none;
-    color: #ffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
-.barra-busqueda {
-    max-width: 40%;
-    margin: 0 auto;
+.barra-busqueda form {
+    display: flex;
+    flex-wrap: nowrap;
 }
+
+.barra-busqueda input[type="search"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.boton-agregar {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.boton-agregar img {
+    margin-right: 10px;
+}
+
+.elementos-s {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .elementos-s {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .barra-busqueda {
+        max-width: 60%; /* Adjusted width for tablet and desktop */
+    }
+}
+
+@media (min-width: 480px) {
+    .barra-busqueda {
+        max-width: 80%;
+        padding: 1rem 0 1rem 0;
+    }
+}
+
+
 
 /*ajustar los tamaños del carrusel*/
 #carouselExampleAutoplaying {
@@ -100,6 +152,24 @@ main {
     width: 30px;
     /* Ajusta el tamaño de la imagen según sea necesario */
     height: auto;
+}
+
+.boton-agregar {
+    background-color: #00B207;
+    border: none;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 43px;
+    transition: padding 0.3s ease;
+    padding: 0.5rem 1rem;  /* Modificado para ser más adaptable */
+}
+
+.boton-agregar img {
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
 }
 
 .boton-editar {
