@@ -33,7 +33,96 @@
 
     <main class="contenedor">
 
-        <div class="container mt-5">
+        <!-- Modal para Agregar Usuarios -->
+        <div class="modal fade" id="modal-dash-add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="inputEmail4">
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="inputPassword4">
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Correo:</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                              </div>
+                              <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Comfirmar contraseña:</label>
+                                <input type="password" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                <input type="number" class="form-control" id="recipient-name">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Agregar usuario</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal para Editar Usuarios -->
+        <div class="modal fade" id="modal-dash-edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="inputEmail4">
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="inputPassword4">
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Correo:</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                              </div>
+                              <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Comfirmar contraseña:</label>
+                                <input type="password" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Telefono:</label>
+                                <input type="number" class="form-control" id="recipient-name">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Editar usuario</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5"> 
             <div class="row">
                 <!-- Grafica de los productos mas vendidos -->
                 <div class="col-lg-6">
@@ -88,11 +177,11 @@
         <section class="contenedor-usuarios">
 
             <div class="botones">
-                <button class="boton-agregar">
+                <button class="boton-agregar" data-bs-toggle="modal" data-bs-target="#modal-dash-add">
                     <img src="../../resources/img/icon-agregar.svg" alt="">Agregar Usuario
                 </button>
 
-                <button class="boton-editar">
+                <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-dash-edit">
                     <img src="../../resources/img/icon-editar.svg" alt="">Editar Usuario
                 </button>
 

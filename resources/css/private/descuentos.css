@@ -17,7 +17,6 @@ main {
     margin-top: 10rem;
     margin-bottom: 2rem;
 }
-
 .boton-busqueda {
     background-color: #00B207;
     color: #ffffff;
@@ -35,6 +34,16 @@ main {
 .barra-busqueda input[type="search"] {
     flex-grow: 1;
     margin-right: 10px;
+}
+
+.boton-agregar {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .boton-agregar img {
@@ -211,4 +220,18 @@ main {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0 10px 0;
+}
+
+.barra-busqueda-modal {
+    width: 100%;
+    display: flex;
+}
+
+.boton-busqueda-modal {
+    background-color: #00B207;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
 }

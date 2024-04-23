@@ -17,7 +17,6 @@ main {
     margin-top: 10rem;
     margin-bottom: 2rem;
 }
-
 .boton-busqueda {
     background-color: #00B207;
     color: #ffffff;
@@ -35,6 +34,16 @@ main {
 .barra-busqueda input[type="search"] {
     flex-grow: 1;
     margin-right: 10px;
+}
+
+.boton-agregar {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .boton-agregar img {
