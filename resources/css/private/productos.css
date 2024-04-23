@@ -17,6 +17,17 @@ main {
     margin-top: 10rem;
 }
 
+.boton-busqueda {
+    background-color: #00B207;
+    border-style: none;
+    color: #ffff;
+}
+
+.barra-busqueda {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
 /*ajustar los tamaños del carrusel*/
 #carouselExampleAutoplaying {
     margin-top: 8%;
@@ -96,10 +107,59 @@ main {
     border: none;
     color: #ffff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 700;
     border-radius: 43px;
     transition: padding 0.3s ease;
-    padding: 0.5rem 5rem;  /* Modificado para ser más adaptable */
+    padding: 0.5rem 1rem;  /* Modificado para ser más adaptable */
 }
 
+.boton-editar img {
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+.boton-eliminar {
+    background-color: #C93E07;
+    border: none;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 43px;
+    transition: padding 0.3s ease;
+    padding: 0.5rem 1rem;  /* Modificado para ser más adaptable */
+}
+
+.boton-eliminar img {
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+.card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botones-cards {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 25rem;
+    height: 20rem;
+    padding: 2rem;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
