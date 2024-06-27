@@ -9,15 +9,13 @@ define('DATABASE', 'gadgetsit');
 define('USERNAME', 'root'); 
 define('PASSWORD', '');
 
-// // Intentar establecer conexión con la base de datos
-// $conn = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);jkl
+ // Intentar establecer conexión con la base de datos
+//  $conn = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
 
-// // Verificar conexión
-// if ($conn->connect_error) {
+//  if ($conn->connect_error) {
 //     die("Conexión fallida: " . $conn->connect_error);
-// } else {
+//  } else {
 //     echo "¡Conexión exitosa!";
-// }
+//  }
 
-// // Cerrar la conexión
-// $conn->close();
+//  $conn->close();
