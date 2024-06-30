@@ -9,9 +9,9 @@ class OfertaHandler
     /*
      *   Declaración de atributos para el manejo de datos.
      */
-    protected $id_oferta= null;
+    protected $id= null;
     protected $titulo = null;
-    protected $descripcion = null;
+    protected $descripcion = null;  
     protected $descuento = null;
     protected $producto = null;
 
@@ -68,7 +68,7 @@ class OfertaHandler
         $sql = 'SELECT id_oferta, titulo, descripcion, descuento, idProducto
                 FROM tb_ofertas
                 WHERE id_oferta = ?';
-        $params = array($this->id_oferta);
+        $params = array($this->id);
         return Database::getRow($sql, $params);
     }
 
@@ -77,7 +77,7 @@ class OfertaHandler
         $sql = 'UPDATE tb_ofertas
                 SET titulo = ?, descripcion = ?, descuento = ?, idProducto = ?
                 WHERE id_oferta = ?';
-        $params = array($this->titulo, $this->descripcion, $this->descuento, $this->producto, $this->id_oferta);
+        $params = array($this->titulo, $this->descripcion, $this->descuento, $this->producto, $this->id);
         return Database::executeRow($sql, $params);
     }
 
@@ -85,13 +85,13 @@ class OfertaHandler
     {
         // Actualizar hasDiscount a 0 en tb_productos
         $sqlUpdate = 'UPDATE tb_productos SET hasDiscount = 0 WHERE idProducto = (SELECT idProducto FROM tb_ofertas WHERE id_oferta = ?)';
-        $paramsUpdate = array($this->id_oferta);
+        $paramsUpdate = array($this->id);
         Database::executeRow($sqlUpdate, $paramsUpdate);
 
 
         // Primero, elimina la oferta en tb_ofertas
         $sqlDelete = 'DELETE FROM tb_ofertas WHERE id_oferta = ?';
-        $paramsDelete = array($this->id_oferta);
+        $paramsDelete = array($this->id);
         return Database::executeRow($sqlDelete, $paramsDelete);
     }
 
