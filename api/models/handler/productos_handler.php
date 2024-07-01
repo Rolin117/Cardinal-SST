@@ -39,7 +39,7 @@ class ProductoHandler
     
     public function createRow()
     {
-        $sql = 'INSERT INTO tb_productos(nombre_producto, precio_producto, descripcion, cantidad_producto, imagen, id_categoria, id_admin, id_oferta)
+        $sql = 'INSERT INTO tb_productos(nombre_producto, precio_producto, c_descripcion, cantidad_producto, imagen, id_categoria, id_admin, id_oferta)
                 VALUES(?, ?, ?, ?, ?, ?, ?, ?)';
         $params = array($this->nombre, $this->precio, $this->descripcion, $this->cantidad, $this->imagen, $this->id_categoria, $this->id_admin, $this->id_oferta);
         return Database::executeRow($sql, $params);
