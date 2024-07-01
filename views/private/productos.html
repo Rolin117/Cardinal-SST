@@ -32,7 +32,7 @@
 
     <main>
         <!-- Modal para agregar un nuevo producto -->
-        <div class="modal fade" id="modal-producto-add" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -40,89 +40,31 @@
                         <h5 class="modal-title" id="exampleModalLabel">Nuevo producto</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 align-items-center justify-content-center">
-                                <form>
+                    <div class="row">
+                        <div class="col-md-6 align-items-center justify-content-center">
+                            <form>
+                                <div class="modal-body">
+                                    <input type="number" class="d-none" id="id_producto" name="id_producto">
+
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nombre:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <input type="text" class="form-control" id="nombre_producto" name="nombre_producto">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Precio:</label>
-                                        <input type="number" class="form-control" id="recipient-name">
+                                        <input type="number" class="form-control" id="precio_producto" name="precio_producto">
                                     </div>
                                     <div class="mb-3">
                                         <label for="message-text" class="col-form-label">Descripción:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Cantidad:</label>
-                                        <input type="number" class="form-control" id="recipient-name">
+                                        <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label for="inputState" class="form-label">Categoria:</label>
-                                        <select id="inputState" class="form-select">
+                                        <select id="categoriaProducto" name="categoriaProducto" class="form-select">
                                             <option selected>categorías...</option>
                                             <option>...</option>
                                         </select>
                                     </div>
-                                </form>
-                            </div>
-                            <!-- Sección para añadir imagen del producto -->
-                            <div class="col-md-6 d-flex align-items-center justify-content-center">
-                                <img id="imagePreview" src="#" alt="Imagen del producto" class="img-thumbnail"
-                                    style="display: none; height: 26rem;">
-                                <i id="addImageIcon" class="fa fa-upload fa-5x"
-                                    style="cursor: pointer; display: block; color: rgb(0, 0, 0);"></i>
-                                <input type="file" id="inputGroupFile01" accept="image/*" style="display: none;">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Agregar producto</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal para editar producto -->
-        <div class="modal fade" id="modal-producto-edit" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar producto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 align-items-center justify-content-center">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Nombre:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Precio:</label>
-                                    <input type="number" class="form-control" id="recipient-name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message-text" class="col-form-label">Descripción:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Cantidad:</label>
-                                    <input type="number" class="form-control" id="recipient-name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="inputState" class="form-label">categoría:</label>
-                                    <select id="inputState" class="form-select">
-                                        <option selected>categorías...</option>
-                                        <option>...</option>
-                                    </select>
                                 </div>
                             </form>
                         </div>
@@ -139,159 +81,30 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Editar producto</button>
+                    <button type="submit" class="btn btn-primary">Agregar producto</button>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
 
         <div class="elementos-s">
             <h4 class="titulo">Productos</h4>
 
             <div class="barra-busqueda">
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar producto..." aria-label="Search">
+                    <input class="form-control me-2" type="search" name="searchForm" placeholder="Buscar producto..." aria-label="Search">
                     <button class="boton-busqueda" type="submit">Buscar</button>
+                    <button type="reset" class="search-btn" onclick="fillTable()">X</button>
                 </form>
             </div>
 
-            <button class="boton-agregar" data-bs-toggle="modal" data-bs-target="#modal-producto-add">
+            <button class="boton-agregar" onclick="openCreate()">
                 <img src="../../resources/img/icon-agregar.svg" alt="">Agregar producto
             </button>
 
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/tornillo.jpg" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Tornillos</h5>
-                        <div class="descripcion-precio">
-                            <p class="card-text">$2.99</p>
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-producto-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar producto
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar producto
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/pala.jpg" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Pala</h5>
-                        <div class="descripcion-precio">
-                            <p class="card-text">$10.99</p>
-
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-producto-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar producto
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar producto
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/martillo2.png" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Martillo</h5>
-                        <div class="descripcion-precio">
-                            <p class="card-text">$6.99</p>
-
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-producto-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar producto
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar producto
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Segunda Fila de productos-->
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/clavos.jpg" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Clavos</h5>
-                        <div class="descripcion-precio">
-                            <p class="card-text">$3.99</p>
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-producto-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar producto
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar producto
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/llavesita.jpg" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Llave inglesa</h5>
-                        <div class="descripcion-precio">
-                            <p class="card-text">$8.99</p>
-
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-producto-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar producto
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar producto
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/cinta.png" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Cinta metríca</h5>
-                        <div class="descripcion-precio">
-                            <p class="card-text">$4.99</p>
-
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-producto-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar producto
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar producto
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="row row-cols-1 row-cols-md-3 g-3" id="tarjetas">
 
         </div><!--Fin de la etiqueta de productos-->
     </main>
@@ -317,7 +130,9 @@
     <!--LInk del controlador de la pagina web-->
     <script type="text/javascript" src="../../controllers/public/inicio.js"></script>
 
-
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <script type="text/javascript" src="../../controllers/private/productos.js"></script>
 </body>
 
 </html>

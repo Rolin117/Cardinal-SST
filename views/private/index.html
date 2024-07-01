@@ -26,24 +26,30 @@
   <div class="card mb-4">
     <div class="card-body p-4">
       <h3 class="card-title mb-4 text-center">Inicio de sesión</h3>
-      <form>
+
+      <form id="loginform" action="/login" method="post">
         <div class="text-center">
             <div class="inputs">
               <div class="form-group mb-3">
-                <input type="email" class="form-control textbox" id="nombre" placeholder="Correo..." value="">
+                <input type="email" class="form-control textbox" id="correo_admin" name="correo_admin" placeholder="Correo..." required>
               </div>
               <div class="form-group mb-3">
-                <input type="password" class="form-control textbox" id="contrasena" placeholder="Contraseña...">
+                <input type="password" class="form-control textbox" id="contrasenia_admin" name="contrasenia_admin" placeholder="Contraseña..." required>
               </div>
             </div>
             <a href="" class="contra-link">Olvide mi contraseña</a>
+            
             <div class="text-center contenedor-boton">
-              <a href="dashboard.html" class="boton">Entrar</a>
+              <button class="boton" type="submit">Iniciar sesión</button>
             </div>
       </form>
     </div>
   </div>
   <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+  <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+  <script type="text/javascript" src="../../controllers/private/index.js"></script>
+
 </body>
 
 </html>

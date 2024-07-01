@@ -34,7 +34,7 @@
     <main class="contenedor">
 
         <!-- Modal para Agregar Usuarios -->
-        <div class="modal fade" id="modal-dash-add" tabindex="-1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -42,102 +42,40 @@
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo usuario</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <form class="row g-3">
+                    <form class="row g-3" >
+                        <div class="modal-body">
+
+                            <input type="number" class="d-none" id="id_administrador" name="id_administrador">
+
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="inputEmail4">
+                                <input type="text" class="form-control" id="nombre_admin" name="nombre_admin">
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Apellido:</label>
-                                <input type="text" class="form-control" id="inputPassword4">
+                                <input type="text" class="form-control" id="apellido_admin" name="apellido_admin">
                             </div>
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Correo:</label>
-                                <input type="email" class="form-control" id="inputEmail4">
+                                <input type="email" class="form-control" id="correo_admin" name="correo_admin">
                             </div>
                             <div class="col-md-6">
                                 <label for="inputPassword4" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="inputPassword4">
+                                <input type="password" class="form-control" id="contrasenia_admin" name="contrasenia_admin">
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Comfirmar contraseña:</label>
-                                <input type="password" class="form-control" id="recipient-name">
+                                <input type="password" class="form-control" id="contrasenia_admin2" name="contrasenia_admin2">
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Telefono:</label>
-                                <input type="number" class="form-control" id="recipient-name">
+                                <input type="number" class="form-control" id="telefono_admin" name="telefono_admin">
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Agregar usuario</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Modal para Editar Usuarios -->
-        <div class="modal fade" id="modal-dash-edit" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar usuario</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row g-3">
-                            <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="inputEmail4">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="inputPassword4" class="form-label">Apellido:</label>
-                                <input type="text" class="form-control" id="inputPassword4">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label">Correo:</label>
-                                <input type="email" class="form-control" id="inputEmail4">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="inputPassword4" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="inputPassword4">
-                            </div>
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Comfirmar contraseña:</label>
-                                <input type="password" class="form-control" id="recipient-name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Telefono:</label>
-                                <input type="number" class="form-control" id="recipient-name">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Editar usuario</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal para el boton de eliminar -->
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Advertencia</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>¿Esta seguro de eliminar el usuario?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Eliminar</button>
+                        <button type="submit" class="btn btn-primary">Agregar usuario</button>
                     </div>
                 </div>
             </div>
@@ -198,7 +136,7 @@
         <section class="contenedor-usuarios">
 
             <div class="botones">
-                <button class="boton-agregar" data-bs-toggle="modal" data-bs-target="#modal-dash-add">
+                <button class="boton-agregar" onclick="openCreate()">
                     <img src="../../resources/img/icon-agregar.svg" alt="">Agregar usuario
                 </button>
 
@@ -221,43 +159,7 @@
                             <th scope="col">Telefono</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row">738</td>
-                            <td>Dominic</td>
-                            <td>Correo1@gmail.com</td>
-                            <td>0000-0000</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">703</td>
-                            <td>Burgos</td>
-                            <td>Correo2@gmail.com</td>
-                            <td>1111-1111</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">130</td>
-                            <td>Rodas</td>
-                            <td>Correo3@gmail.com</td>
-                            <td>2222-2222</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">561</td>
-                            <td>Kevin</td>
-                            <td>Correo4@gmail.com</td>
-                            <td>3333-3333</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">560</td>
-                            <td>Michael</td>
-                            <td>Correo5@gmail.com</td>
-                            <td>4444-4444</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">492</td>
-                            <td>Cesar</td>
-                            <td>Correo6@gmail.com</td>
-                            <td>5555-5555</td>
-                        </tr>
+                    <tbody id="tableBody">
                     </tbody>
                 </table>
             </div>
@@ -278,6 +180,10 @@
     <!-- Plantillas -->
     <script src="../../resources/js/private/nav.js"></script>
     <script src="../../resources/js/private/footer.js"></script>
+
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <script src="../../controllers/private/administrador.js"></script>
 </body>
 
 </html>

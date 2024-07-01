@@ -33,187 +33,66 @@
     <main>
 
         <!-- Modal para agregar una nueva categoria -->
-        <div class="modal fade" id="modal-categoria-add" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="saveModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nueva categoría</h5>
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 align-items-center justify-content-center">
-                                <form>
+                    <div class="row">
+                        <div class="col-md-6 align-items-center justify-content-center">
+                            <form>
+                                <div class="modal-body">
+                                    <input type="number" class="d-none" id="id_categoria" name="id_categoria">
+
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nombre:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <input type="text" class="form-control" id="nombre_cat" name="nombre_cat">
                                     </div>
                                     <div class="mb-3">
                                         <label for="message-text" class="col-form-label">Descripción:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
+                                        <textarea class="form-control" id="descripcion_cat" name="descripcion_cat"></textarea>
                                     </div>
-                                </form>
-                            </div>
-                            <!-- Sección para añadir imagen de la categoría -->
-                            <div class="col-md-6 d-flex align-items-center justify-content-center">
-                                <img id="imagePreview" src="#" alt="Imagen del producto" class="img-thumbnail"
-                                    style="display: none; height: 26rem;">
-                                <i id="addImageIcon" class="fa fa-upload fa-5x"
-                                    style="cursor: pointer; display: block; color: rgb(0, 0, 0);"></i>
-                                <input type="file" id="inputGroupFile01" accept="image/*" style="display: none;">
-                            </div>
-
+                                </div>
+                            </form>
                         </div>
+                        <!-- Sección para añadir imagen de la categoría -->
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <img id="imagePreview" src="#" alt="Imagen del producto" class="img-thumbnail"
+                                style="display: none; height: 26rem;">
+                            <i id="addImageIcon" class="fa fa-upload fa-5x"
+                                style="cursor: pointer; display: block; color: rgb(0, 0, 0);"></i>
+                            <input type="file" name="imagen" id="inputGroupFile01" accept="image/*" style="display: none;">
+                        </div>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Agregar categoría</button>
+                        <button type="submit" class="btn btn-primary" >Agregar categoría</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Modal para editar categoria -->
-        <div class="modal fade" id="modal-categoria-edit" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Editar categoría</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 align-items-center justify-content-center">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Nombre:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="message-text" class="col-form-label">Descripción:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Sección para añadir imagen de la categoría -->
-                            <div class="col-md-6 d-flex align-items-center justify-content-center">
-                                <img id="imagePreview" src="#" alt="Imagen del producto" class="img-thumbnail"
-                                    style="display: none; height: 26rem;">
-                                <i id="addImageIcon" class="fa fa-upload fa-5x"
-                                    style="cursor: pointer; display: block; color: rgb(0, 0, 0);"></i>
-                                <input type="file" id="inputGroupFile01" accept="image/*" style="display: none;">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Editar categoría</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal para el boton de eliminar -->
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Advertencia</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>¿Esta seguro de eliminar esta categoría?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Eliminar</button>
-                </div>
-              </div>
-            </div>
-          </div>
 
         <div class="elementos-s">
             <h4 class="titulo">categorías</h4>
 
             <div class="barra-busqueda">
-                <form class="d-flex" role="search">
+                <form class="d-flex" role="search" id="searchForm">
                     <input class="form-control me-2" type="search" placeholder="Buscar categoria..."
                         aria-label="Search">
                     <button class="boton-busqueda" type="submit">Buscar</button>
                 </form>
             </div>
 
-            <button class="boton-agregar" data-bs-toggle="modal" data-bs-target="#modal-categoria-add">
+            <button type="button" class="boton-agregar" onclick="openCreate()">
                 <img src="../../resources/img/icon-agregar.svg" alt="">Agregar categoría
             </button>
 
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/destornillador.jpg" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Herramientas</h5>
-                        <div class="descripcion-precio">
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-categoria-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar categoría
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar categoría
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/tubos.jpg" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Tubos pvc</h5>
-                        <div class="descripcion-precio">
-
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-categoria-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar categoría
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar categoría
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 border-light">
-                    <img src="../../resources/img/cortadora 1.png" class="card-img-top" alt="..." loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Electricos</h5>
-                        <div class="descripcion-precio">
-
-                        </div>
-                        <div class="botones-cards">
-                            <button class="boton-editar" data-bs-toggle="modal" data-bs-target="#modal-categoria-edit">
-                                <img src="../../resources/img/icon-editar.svg" alt="">Editar categoría
-                            </button>
-
-                            <button class="boton-eliminar">
-                                <img src="../../resources/img/icon-eliminar.svg" alt="">Eliminar categoría
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row row-cols-1 row-cols-md-3 g-3" id="tarjetas">
 
         </div>
     </main>
@@ -235,6 +114,10 @@
     <script src="../../resources/js/private/footer.js"></script>
     <script src="../../resources/js/private/agregar_imagen.js"></script>
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../../controllers/utils/components.js"></script>
+    <script type="text/javascript" src="../../controllers/private/categorias.js"></script>
 </body>
 
 </html>
