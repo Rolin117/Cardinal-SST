@@ -32,8 +32,8 @@ const loadTemplate = async () => {
                 <header>
                     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
                         <div class="container">
-                            <a class="navbar-brand" href="inicioCecot.html">
-                                <img src="../../Recursos/Img/LogoPretty.png" alt="PrettyUsine" width="50">
+                            <a class="navbar-brand" href="dashboard.html">
+                                <img src="../../resources/img/logo.png" alt="Cardinal-SST" width="50">
                             </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -41,22 +41,16 @@ const loadTemplate = async () => {
                             <div class="collapse navbar-collapse" id="navbarContent">
                                 <ul class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../Cecot/productos.html">Productos</a>
+                                        <a class="nav-link" href="../private/productos.html">Productos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../Cecot/categoria.html">Categorías</a>
+                                        <a class="nav-link" href="../private/categorias.html">Categorías</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../Cecot/pedidos.html">Pedidos</a>
+                                        <a class="nav-link" href="../private/descuentos.html">Descuentos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../Cecot/administrador.html">Administradores</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../Cecot/clientes.html">Clientes</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../Cecot/valoraciones.html">Valoraciones</a>
+                                        <a class="nav-link" href="../private/servicios.html">Servicios</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cuenta: <b>${DATA.username}</b></a>
@@ -78,12 +72,12 @@ const loadTemplate = async () => {
                     <nav class="navbar fixed-bottom bg-body-tertiary">
                         <div class="container">
                             <div>
-                                <p><a class="nav-link" href="https://github.com/Juan2022-a/PrettyUsine" target="_blank"><i class="bi bi-github"></i> PrettyUsine</a></p>
-                                <p><i class="bi bi-c-square-fill"></i> 2023-2024 Todos los derechos reservados</p>
+                                <p><a class="nav-link" href="https://github.com/Rolin117/Cardinal-SST" target="_blank"><i class="bi bi-github"></i>Cardinal-SST</a></p>
+                                <p><i class="bi bi-c-square-fill"></i> 2024 Todos los derechos reservados</p>
                             </div>
                             <div>
                                 <p><a class="nav-link" href="../../Vistas/Publica" target="_blank"><i class="bi bi-cart-fill"></i> Sitio público</a></p>
-                                <p><i class="bi bi-envelope-fill"></i> prettyusine@gmail.com</p>
+                                <p><i class="bi bi-envelope-fill"></i> cardinal_sst@gmail.com</p>
                             </div>
                         </div>
                     </nav>
@@ -100,8 +94,8 @@ const loadTemplate = async () => {
                 <header>
                     <nav class="navbar fixed-top bg-body-tertiary">
                         <div class="container">
-                        <a class="navbar-brand" href="inicioCecot.html">
-                        <img src="../../Recursos/Img/LogoPretty.png" alt="PrettyUsine" width="50">
+                        <a class="navbar-brand" href="dashboard.html">
+                        <img src="../../resources/img/logo.png" alt="Cardinal-SST" width="50">
                     </a>
                         </div>
                     </nav>
@@ -112,8 +106,8 @@ const loadTemplate = async () => {
                 <footer>
                     <nav class="navbar fixed-bottom bg-body-tertiary">
                         <div class="container">
-                            <p><a class="nav-link" href="https://github.com/Juan2022-a/PrettyUsine" target="_blank"><i class="bi bi-github"></i> PrettyUsine</a></p>
-                            <p><i class="bi bi-envelope-fill"></i> prettyusine@gmail.com</p>
+                            <p><a class="nav-link" href="https://github.com/Rolin117/Cardinal-SST" target="_blank"><i class="bi bi-github"></i> Cardinal-SST</a></p>
+                            <p><i class="bi bi-envelope-fill"></i> cardinal_sst@gmail.com</p>
                         </div>
                     </nav>
                 </footer>

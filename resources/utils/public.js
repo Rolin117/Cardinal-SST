@@ -11,7 +11,7 @@ MAIN.style.paddingTop = '75px';
 MAIN.style.paddingBottom = '100px';
 MAIN.classList.add('container');
 // Se establece el título de la página web.
-document.querySelector('title').textContent = 'PrettyUsine - Store';
+document.querySelector('title').textContent = 'CardinalSST - Store';
 // Constante para establecer el elemento del título principal.
 const MAIN_TITLE = document.getElementById('mainTitle');
 MAIN_TITLE.classList.add('text-center', 'py-3');
@@ -32,7 +32,7 @@ const loadTemplate = async () => {
                 <header>
                     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
                         <div class="container">
-                            <a class="navbar-brand" href="index.html"><img src="../../Recursos/Img/LogoPretty.png" height="50" alt="PrettyUsine"></a>
+                            <a class="navbar-brand" href="index.html"><img src="../../resources/img/logo.png" height="50" alt="Cardinal-SST"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -58,7 +58,7 @@ const loadTemplate = async () => {
             <header>
                 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
                     <div class="container">
-                        <a class="navbar-brand" href="index.html"><img src="../../Recursos/Img/LogoPretty.png" height="50" alt="PrettyUsine"></a>
+                        <a class="navbar-brand" href="index.html"><img src="../../resources/img/logo.png" height="50" alt="Cardinal-SST"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -80,12 +80,12 @@ const loadTemplate = async () => {
             <nav class="navbar fixed-bottom bg-body-tertiary">
                 <div class="container">
                     <div>
-                        <h6>PrettyUsine</h6>
-                        <p><i class="bi bi-c-square"></i> 2023-2024 Todos los derechos reservados</p>
+                        <h6>Cardinal-SST</h6>
+                        <p><i class="bi bi-c-square"></i> 2024 Todos los derechos reservados</p>
                     </div>
                     <div>
                         <h6>Contáctanos</h6>
-                        <p><i class="bi bi-envelope"></i> prettyusine@gmail.com</p>
+                        <p><i class="bi bi-envelope"></i> cardinal_sst@gmail.com</p>
                     </div>
                 </div>
             </nav>
